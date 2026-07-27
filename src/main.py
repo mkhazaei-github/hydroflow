@@ -1,18 +1,7 @@
-import pandas as pd
+from src.reader import read_csv
 
-print("HydroFlow started successfully!")
+file_path = "data/Ober-Eschbach_W15min.csv"
 
-data = {
-    "Station": ["Eschbach", "Schwarzbach"],
-    "Discharge": [12.4, 8.7]
-}
+df = read_csv(file_path)
 
-df = pd.DataFrame(data)
-
-print(df)
-
-def add(a, b):
-    return a + b
-
-
-print(add(5, 3))
+print(df.head())
